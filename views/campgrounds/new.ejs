@@ -1,0 +1,50 @@
+<% layout("layouts/boilerplate") %> 
+<%- include("../partials/flash")  %> 
+<div class="row">  
+    <div class="col-6 offset-3">
+<h1>Add Campground</h1>
+    
+    <form action="/campgrounds" method="post" class="validated-form" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input class="form-control" type="text" id="title" name="campground[title]" required>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+        <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input class="form-control" type="text" id="location" name="campground[location]" required>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+      
+        <div class="mb-3">
+            <label for="price" class="form-label">Campground Price</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">$</span>
+            <input id="price" name="campground[price]" type="text" class="form-control" placeholder="0.00" aria-label="Username" aria-describedby="campground-price" required>
+          <div class="valid-feedback">
+              Nice Job!
+          </div>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="customFile">Upload Images</label>
+            <input type="file" name="image" class="form-control" id="customFile" multiple/>
+        </div>
+        <div class="mb-3">
+        <button class="btn btn-success">Add Campground</button>
+        </div>
+    </form>
+    <footer><a href="/campgrounds">Back</a></footer>
+</div> 
+</div>

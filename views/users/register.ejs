@@ -1,0 +1,42 @@
+<% layout("layouts/boilerplate") %> 
+<%- include("../partials/flash")  %> 
+<div class="card col-6 offset-3 col-lg-4 offset-lg-4 mb-5">
+    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcGluZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+    alt="Camping Image" class="card-img-top">
+    <div class="card-body">
+    <h2 class="card-tilte">Register New User</h2>
+    <form action="/user/register" method="post" class="validated-form" novalidate>
+    <div class="mb-3">
+        <label for="username" class="form-label card-text">Username</label>
+        <input class="form-control" type="text" id="username" name="username" required autofocus>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label card-text">Email</label>
+        <input class="form-control" type="text" id="email" name="email" required>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label card-text">Password</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="confirm" class="form-label card-text">Confirm Password</label>
+        <input class="form-control" type="password" id="confirm" name="confirm" required>
+        <div class="valid-feedback">
+            Nice Job!
+        </div>
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn btn-success">Register</button>
+    </div>
+</form>
+</div>
+</div>
